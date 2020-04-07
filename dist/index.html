@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+  Author: Sandrico Provo
+  GitHub: sandricoprovo
+  Details: This ppages lets users search for covid 19 stats by country. It also shows the global stats. For both types of data, totals, new, death and recovered cases are shown. 
+ -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>COVID-19 Stats</title>
+</head>
+
+<body>
+
+  <main id="wrapper">
+    <!-- Data Entry Section -->
+    <section id="entry">
+      <h1 class="logo--text">Stay Safe.</h1>
+      <div>
+        <h1 class="title--main">Find Stats on <span
+            class="title--disease">COVID-19</span> By Country</h1>
+        <p class="title--subtext">Start your search here.</p>
+        <div class="entry--country">
+          <p class="country--listheader">Country Listing</p>
+          <select name="countryList" size="10"></select>
+          <br>
+          <button class="btn--search">Search</button>
+        </div>
+    </section>
+
+    <!-- Data Display Section -->
+    <section id="data">
+      <div class="data--content">
+        <div>
+          <div class="data--location data--card">
+            <p class="data--country">Country:</p>
+          </div>
+          <div class="data--cases data--card">
+            <p>Confirmed</p>
+            <span class="data--total">Total: 0</span>
+            <span class="data--new">New: 0</span>
+          </div>
+          <div class="data--deaths data--card">
+            <p>Deaths</p>
+            <span class="data--total">Total: 0</span>
+            <span class="data--new">New: 0</span>
+          </div>
+          <div class="data--recovered data--card">
+            <p>Recovered</p>
+            <span class="data--total">Total: 0</span>
+            <span class="data--new">New: 0</span>
+          </div>
+        </div>
+        <div class="data--world">
+          <p class="data--timestamp">Country Stats Last Updated: </p>
+          <p class="world--confirmed">Total World Cases: </p>
+          <p class="world--new">Today's New Cases: </p>
+          <p class="world--deaths">World Fatality Rate: </p>
+          <p class="world--recovered">World Recovery Rate: </p>
+          <p class="world--date">World Stats Last Updated: </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Project Created By:</p>
+      <p>Sandrico Provo</p>
+      <a href="https://github.com/sandricoprovo" target="_blank">My GitHub</a>
+      <a href="https://sandricoprovo.dev" target="_blank">My Website</a>
+      <a href="https://covid19api.com" target="_blank">API Data</a>
+    </footer>
+  </main>
+
+  <script src="./javascript/anime.es.js"></script>
+  <script src="./javascript/script.js"></script>
+</body>
+
+</html>

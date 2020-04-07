@@ -1,0 +1,256 @@
+@import "../base/variables";
+
+#wrapper {
+  width: 100vw;
+  background-color: $white;
+  button:focus,
+  input:focus {
+    outline: none;
+  }
+
+  #entry {
+    width: 50vw;
+    height: 100%;
+    padding-left: 40px;
+
+    .logo--text {
+      height: 20px;
+      color: $black;
+      padding-left: 8px;
+      font-size: $fontsize-subhead;
+      font-family: "Fira Sans";
+      font-weight: 400;
+    }
+
+    .title--main {
+      margin: 0px;
+      width: 60%;
+      color: $black;
+      font-size: $fontsize-header;
+      font-family: "Fira Sans";
+      font-weight: 800;
+    }
+
+    .title--subtext {
+      color: $black;
+      margin: 2px 0px 8vh 0px;
+      font-size: $fontsize-paragraph;
+      font-family: "Fira Sans";
+      font-weight: 400;
+    }
+
+    .entry--country {
+      .country--listheader {
+        margin: 0px 0px 8px 0px;
+        font-size: $fontsize-subhead;
+        font-family: "Fira Sans";
+        font-weight: 400;
+      }
+
+      select[name="countryList"] {
+        width: 300px;
+        height: 200px;
+        padding: 8px;
+        border: none;
+        color: $black;
+        background-color: $white;
+        border: 2px solid $white;
+        font-size: $fontsize-paragraph;
+        font-family: "Fira Sans";
+        font-weight: 400;
+        border-radius: $border-radius;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      label {
+        color: $black;
+        font-size: $fontsize-subhead;
+        font-family: "Fira Sans";
+        font-weight: 400;
+      }
+
+      input {
+        width: 280px;
+        height: 24px;
+        border: 2px solid $main-blue;
+        border-radius: $border-radius;
+        font-size: $fontsize-paragraph;
+        font-family: "Fira Sans";
+        font-weight: 400;
+      }
+    }
+
+    .btn--search {
+      margin-top: 24px;
+      background-color: $white;
+      width: 104px;
+      height: 32px;
+      color: $black;
+      border: none;
+      font-size: $fontsize-paragraph;
+      font-family: "Fira Sans";
+      font-weight: 400;
+      border-radius: $border-radius;
+    }
+  }
+
+  #data {
+    width: 50vw;
+    height: 100vh;
+    padding-left: 8vw;
+
+    .data--content {
+      padding-bottom: 24px;
+      height: 100vh;
+      width: 100%;
+      background-color: $dark-blue;
+      background-image: linear-gradient(120deg, $main-blue, $dark-blue);
+
+      .data--card {
+        width: 80%;
+        min-width: 70%;
+        margin: 16px 0px;
+        color: $black;
+        border-radius: $cardBorder-radius;
+        padding: 16px;
+
+        p {
+          font-size: $fontsize-paragraph;
+          font-family: "Fira Sans";
+          font-weight: 400;
+        }
+
+        .data--country {
+          font-size: $fontsize-subhead;
+          font-family: "Fira Sans";
+          font-weight: 400;
+          color: $black;
+        }
+
+        .data--total {
+          display: inline-block;
+          width: 45%;
+          min-width: 160px;
+          font-size: $fontsize-subhead;
+          font-family: "Fira Sans";
+          font-weight: 800;
+        }
+
+        .data--new {
+          display: inline-block;
+          width: 45%;
+          min-width: 160px;
+          font-size: $fontsize-subhead;
+          font-family: "Fira Sans";
+          font-weight: 800;
+        }
+      }
+
+      .data--world {
+        padding-left: 16px;
+        height: 24%;
+        width: 100%;
+
+        p[class^="world"] {
+          margin: 4px;
+          font-size: 0.8rem;
+          color: lighten($main-blue, 16%);
+          font-family: "Fira Sans";
+          font-weight: 400;
+        }
+      }
+
+      .data--timestamp {
+        font-style: italic;
+        color: lighten($main-blue, 16%);
+        font-size: $fontsize-paragraph;
+        font-family: "Fira Sans";
+        font-weight: 400;
+      }
+    }
+  }
+
+  footer {
+    margin-top: -24px;
+    background-image: linear-gradient(
+      90deg,
+      rgba(232, 210, 101, 1) 40%,
+      rgba(215, 190, 65, 1) 100%
+    );
+    height: 20vh;
+    width: 100vw;
+
+    p {
+      color: $black;
+      margin: 0px;
+    }
+
+    p:first-child {
+      font-style: italic;
+      font-size: $fontsize-paragraph;
+      font-family: "Fira Sans";
+      font-weight: 800;
+    }
+
+    p:nth-child(2) {
+      font-family: "Fira Sans";
+      font-size: $fontsize-subhead;
+      font-weight: 800;
+      margin: 4px 0px 16px 0px;
+    }
+
+    a {
+      color: $black;
+      font-size: $fontsize-paragraph;
+      font-family: "Fira Sans";
+      font-weight: 400;
+      text-decoration: none;
+
+      &:hover {
+        color: $dark-blue;
+        transform: scale(1.2);
+        font-weight: 800;
+      }
+
+      &::before {
+        content: "< ";
+      }
+
+      &::after {
+        content: " />";
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  #wrapper {
+    min-height: 100vh;
+    #entry {
+      width: 100vw;
+
+      .entry--country {
+        padding-left: 8px;
+
+        select[name="countryList"] {
+          width: 220px;
+        }
+      }
+    }
+
+    #data {
+      width: 100vw;
+      height: 100%;
+      padding: 0px;
+
+      .data--content {
+        margin-top: 24px;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
